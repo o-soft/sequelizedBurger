@@ -1,0 +1,28 @@
+<h1> BURGERS! </h1>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<table>
+			{{#each burgers}}
+			<form action="/{{this.id}}?_method=PUT" method="POST">
+				<tr>
+					<td><button type="submit">{{this.burger_name}}</button></td>
+				</tr>
+			</form>
+			{{/each}}
+		</table>
+	</div>
+</div>
+
+<h1>Eaten</h1>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<table>
+				{{#each eaten}}
+				<tr>
+					<td>{{this.burger_name}}</td>
+				</tr>
+				{{/each}}
+			</table>
+		</div>
+	</div>
